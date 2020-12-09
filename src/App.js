@@ -16,6 +16,7 @@ import NameList from './components/NameList'
 import LifeCycle from './components/LifeCycle'
 import ClassCounter from './components/ClassCounter';
 import HookCounter from './components/HookCounter';
+import HookCounter2 from './components/HookCounter2';
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
       {/* <UserGreeting/> */}
       {/* <NameList/> */}
       {/* <LifeCycle /> */}
-      <ClassCounter />
-      <HookCounter />
+      {/* <ClassCounter /> */}
+      {/* <HookCounter /> */}
+      <HookCounter2 />
     </div>
   );
 }

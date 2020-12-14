@@ -74,7 +74,8 @@ function App() {
           <ComponentC />
         </ChannelContext.Provider>
       </UserContext.Provider> */}
-      <Counter1 />
+      {/* <Counter1 /> */}
+      <Counter2 />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet' //default import
@@ -31,11 +31,37 @@ import ComponentC from './components/ComponentC';
 import Counter1 from './components/Counter1';
 import Counter2 from './components/Counter2';
 import Counter3 from './components/Counter3';
+import Component1 from './components/Component1';
+import Component2 from './components/Component2';
+import Component3 from './components/Component3';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
 
+export const CountContext = React.createContext()
+
+const initialState = 0
+const reducer = (state, action) => {
+  let newState = state
+  switch (action) {
+    case 'increment':
+      newState = state + 1
+      break
+    case 'decrement':
+      newState = state - 1
+      break
+    case 'reset':
+      newState = initialState
+      break
+    default:
+      newState = state
+      break
+  }
+  return newState
+}
+
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
       {/* <Greet name="Lakshay" surname="Kumar">
@@ -77,8 +103,14 @@ function App() {
       </UserContext.Provider> */}
       {/* <Counter1 /> */}
       {/* <Counter2 /> */}
-      <Counter3 />
-    </div>
+      {/* <Counter3 /> */}
+      <h1>Count: {count}</h1>
+      <CountContext.Provider value={{ count: count, dispatch: dispatch }}>
+        <Component1 />
+        <Component2 />
+        <Component3 />
+      </CountContext.Provider>
+    </div >
   );
 }
 

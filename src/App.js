@@ -39,6 +39,7 @@ import DataFetching3 from './components/DataFetching3';
 import PureComp from './components/PureComp';
 import ParentComp from './components/ParentComp';
 import MemoComp from './components/MemoComp';
+import UseMemoCounter from './components/UseMemoCounter';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -117,7 +118,8 @@ function App() {
       </CountContext.Provider> */}
       {/* <DataFetching2 /> */}
       {/* <DataFetching3 /> */}
-      <ParentComp />
+      {/* <ParentComp /> */}
+      <UseMemoCounter />
     </div >
   );
 }

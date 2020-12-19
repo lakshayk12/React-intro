@@ -36,6 +36,8 @@ import Component2 from './components/Component2';
 import Component3 from './components/Component3';
 import DataFetching2 from './components/DataFetching2';
 import DataFetching3 from './components/DataFetching3';
+import PureComp from './components/PureComp';
+import ParentComp from './components/ParentComp';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -113,7 +115,8 @@ function App() {
         <Component3 />
       </CountContext.Provider> */}
       {/* <DataFetching2 /> */}
-      <DataFetching3 />
+      {/* <DataFetching3 /> */}
+      <ParentComp />
     </div >
   );
 }

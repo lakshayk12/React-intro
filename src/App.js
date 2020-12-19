@@ -38,6 +38,7 @@ import DataFetching2 from './components/DataFetching2';
 import DataFetching3 from './components/DataFetching3';
 import PureComp from './components/PureComp';
 import ParentComp from './components/ParentComp';
+import MemoComp from './components/MemoComp';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
